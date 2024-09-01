@@ -1,4 +1,4 @@
-Got it! Here's the updated README with the correct versions:
+Got it! Here's the updated README with the correct versions and additional notes:
 
 # 🐳 **Docker Compose Environment for Hadoop, Hive, and Spark**
 
@@ -31,7 +31,7 @@ To get this environment up and running, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/docker-hadoop-hive-spark.git
+   git clone https://github.com/naveenNTP/docker-hadoop-hive-dsai2024.git
    cd docker-hadoop-hive-spark
    ```
 
@@ -60,9 +60,12 @@ To get this environment up and running, follow these steps:
 5. **Access the Services**:
    - **🌐 Hadoop NameNode UI**: [http://localhost:9870/dfshealth.html#tab-overview](http://localhost:9870/dfshealth.html#tab-overview)
    - **🌐 Hadoop DataNode UI**: [http://localhost:9864](http://localhost:9864)
-   - **🌐 HiveServer2 UI**: [http://localhost:10000](http://localhost:10000)
-   - **🌐 Spark Master UI**: [http://localhost:8080](http://localhost:8080)
-   - **🌐 Spark Worker 1 UI**: [http://localhost:8081](http://localhost:8081)
+   - **🌐 History server**:[http://localhost:8188/applicationhistory](http://localhost:8188/applicationhistory)
+   - **🌐 Nodemanager**:[http://localhost:8042/node](http://localhost:8042/node)
+   - **🌐 Resource manager**:[http://localhost:8088](http://localhost:8088)
+   - **🌐 HiveServer2 UI**: [http://localhost:10000](http://localhost:10000) - not working 
+   - **🌐 Spark Master UI**: [http://localhost:8080](http://localhost:8080) - Disabled 
+   - **🌐 Spark Worker 1 UI**: [http://localhost:8081](http://localhost:8081) - Disabled 
 
 ## 🧹 **Bringing Down the Environment and Cleanup**
 
@@ -115,6 +118,11 @@ If nothing is listed, your Docker environment is fully cleaned up.
 
 These instructions are precise and ensure that your system remains tidy after running the big data stack. Let me know if you need further customization!
 
+### Note on Images
+
+The images for DataNode, NameNode and other hadoop services ( not hive ) include Python, which can be useful for various data processing  tasks which we had a hard time with 
+
+
 ## 🎓 **Purpose**
 
 This Docker Compose environment was created specifically for our executive education study group as part of the Big Data Analytics (BDA) module. We encountered challenges in finding a modern and functional Hadoop setup, leading to the creation of this system for local experimentation and assignment completion.
@@ -140,19 +148,6 @@ Made with ❤️ by [Naveen](https://www.linkedin.com/in/naveen-devops-sre/)
 
 ---
 
-### Additional Information
-
-The following URLs match the Docker file update UI sections:
-
-- **Namenode**: [http://<dockerhadoop_IP_address>:9870/dfshealth.html#tab-overview](http://<dockerhadoop_IP_address>:9870/dfshealth.html#tab-overview)
-- **History server**: [http://<dockerhadoop_IP_address>:8188/applicationhistory](http://<dockerhadoop_IP_address>:8188/applicationhistory)
-- **Datanode**: [http://<dockerhadoop_IP_address>:9864/](http://<dockerhadoop_IP_address>:9864/)
-- **Nodemanager**: [http://<dockerhadoop_IP_address>:8042/node](http://<dockerhadoop_IP_address>:8042/node)
-- **Resource manager**: [http://<dockerhadoop_IP_address>:8088/](http://<dockerhadoop_IP_address>:8088/)
-- **Spark master**: [http://<dockerhadoop_IP_address>:8080/](http://<dockerhadoop_IP_address>:8080/)
-- **Spark worker**: [http://<dockerhadoop_IP_address>:8081/](http://<dockerhadoop_IP_address>:8081/)
-- **Hive**: [http://<dockerhadoop_IP_address>:10000/](http://<dockerhadoop_IP_address>:10000/)
-
 ### Volume Mounts
 
 The following volumes have been added to the Hive server, DataNode, and NameNode to allow copying exercise files from two directories above - Hadoop and Spark folders:
@@ -166,5 +161,9 @@ You can customize these paths as required in the `docker-compose.yml` file.
 ### Spark Master and Spark Worker Disabled
 
 We have disabled the Spark Master and Spark Worker services in the `docker-compose.yml` file. Instead, we are using the `jupyter/all-spark-notebook` image, which comes with an inbuilt Spark setup. This allows us to execute all Spark-related tasks within Jupyter notebooks, providing a more integrated and user-friendly environment. You can find the Jupyter image on [Docker Hub](https://hub.docker.com/r/jupyter/all-spark-notebook).
+
+### Note on Images
+
+The images for DataNode, NameNode, and other services include Python, which can be useful for various data processing tasks.
 
 Feel free to reach out if you need any more help!
