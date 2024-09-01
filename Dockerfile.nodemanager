@@ -1,0 +1,9 @@
+# Dockerfile.nodemanager
+FROM bde2020/hadoop-nodemanager:2.0.0-hadoop3.1.3-java8
+
+# Copy the startup script into the container
+COPY startup/startup-naveen.sh /usr/local/bin/startup-naveen.sh
+
+# Make the startup script executable
+RUN chmod +x /usr/local/bin/startup-naveen.sh
+RUN /usr/local/bin/startup-naveen.sh
