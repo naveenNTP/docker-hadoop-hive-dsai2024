@@ -122,6 +122,9 @@ These instructions are precise and ensure that your system remains tidy after ru
 
 The images for DataNode, NameNode and other hadoop services ( not hive ) include Python, which can be useful for various data processing  tasks which we had a hard time with 
 
+### Idle i see it used ~ 4GB of Ram which is cool :)
+- Spark was not running 9/11
+![Docker Setup](READ-ME/docker-desktop-screenshots/cpu-ram-without-spark.png)
 
 ## 🎓 **Purpose**
 
@@ -142,7 +145,7 @@ In case of any issues:
 
 ## 🤝 **Good luck**
 
-Made with ❤️ by [Naveen](https://www.linkedin.com/in/naveen-devops-sre/)
+Made with ❤️🎓 by [Naveen](https://www.linkedin.com/in/naveen-devops-sre/)
 
 **Happy building! 🚀 & experimenting with your Big Data environment!** 🐋
 
@@ -167,3 +170,4 @@ We have disabled the Spark Master and Spark Worker services in the `docker-compo
 The images for DataNode, NameNode, and other services include Python, which can be useful for various data processing tasks.
 
 Feel free to reach out if you need any more help!
+- [Naveen](https://www.linkedin.com/in/naveen-devops-sre/)

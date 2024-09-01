@@ -1,6 +1,3 @@
-Got it! Here's the updated README section with a dedicated section for setting up Docker Compose for Hadoop on your system:
-
----
 
 ## 💻 **Special Instructions for Mac M1/M2/M3 (ARM64) Users**
 
@@ -35,6 +32,10 @@ To enable Rosetta in Docker Desktop:
 3. Navigate to **General**.
 4. Tick the option **Use Rosetta for x86_64/amd64 emulation on Apple Silicon**.
 5. Restart Docker Desktop.
+
+---
+
+![Docker Setup](docker-desktop-screenshots/arm64-docker-desktop.jpg)
 
 ---
 
