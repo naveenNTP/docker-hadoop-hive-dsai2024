@@ -30,9 +30,10 @@ If you encounter issues, such as network conflicts or an accumulation of unused 
 To get this environment up and running, follow these steps:
 
 1. **Clone the Repository**:
+Keep it next to your existing network 
    ```bash
    git clone https://github.com/naveenNTP/docker-hadoop-hive-dsai2024.git
-   cd docker-hadoop-hive-spark
+   cd docker-hadoop-hive-dsai2024
    ```
 
 2. **Build Docker Images**:
@@ -47,7 +48,7 @@ To get this environment up and running, follow these steps:
      docker-compose build
      ```
 
-3. **If the bridge network is not created**:
+3. **If the bridge network ( spark-hive) is not created**:
    ```bash
    docker network create --driver bridge spark-hive
    ```

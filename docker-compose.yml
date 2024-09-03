@@ -3,6 +3,7 @@
 #    #driver: bridge
 networks:
   default:
+    #external: true
     name: spark-hive
 
 volumes:
