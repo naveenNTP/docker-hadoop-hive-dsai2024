@@ -32,6 +32,7 @@ To get this environment up and running, follow these steps:
 1. **Clone the Repository**:
 
 Keep it next to your existing docker directory 
+
    ```bash
    git clone https://github.com/naveenNTP/docker-hadoop-hive-dsai2024.git
    cd docker-hadoop-hive-dsai2024
